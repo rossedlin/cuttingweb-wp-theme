@@ -28,6 +28,9 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+<!-- Latest compiled and minified JavaScript -->
+<script src="/wp-content/themes/cuttingweb-underscore/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
 <?php wp_footer(); ?>
 
 </body>

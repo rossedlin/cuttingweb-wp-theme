@@ -17,6 +17,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
+	<!-- Bootstrap Start -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="/wp-content/themes/cuttingweb-underscore/bootstrap-3.3.7/css/bootstrap.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="/wp-content/themes/cuttingweb-underscore/bootstrap-3.3.7/css/bootstrap-theme.min.css">
+	<!-- Bootstrap End -->
+
+	<!-- Font Awesome Start -->
+	<link rel="stylesheet" href="/wp-content/themes/cuttingweb-underscore/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!-- Font Awesome End -->
+
 	<?php wp_head(); ?>
 </head>
 
