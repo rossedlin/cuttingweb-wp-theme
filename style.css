@@ -46,13 +46,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-html {
-	font-family: sans-serif;
+html
+{
+	font-family:              sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
 
-body {
+body
+{
 	margin: 0;
 }
 
@@ -67,193 +69,230 @@ main,
 menu,
 nav,
 section,
-summary {
+summary
+{
 	display: block;
 }
 
 audio,
 canvas,
 progress,
-video {
-	display: inline-block;
+video
+{
+	display:        inline-block;
 	vertical-align: baseline;
 }
 
-audio:not([controls]) {
+audio:not([controls])
+{
 	display: none;
-	height: 0;
+	height:  0;
 }
 
 [hidden],
-template {
+template
+{
 	display: none;
 }
 
-a {
+a
+{
 	background-color: transparent;
 }
 
 a:active,
-a:hover {
+a:hover
+{
 	outline: 0;
 }
 
-abbr[title] {
+abbr[title]
+{
 	border-bottom: 1px dotted;
 }
 
 b,
-strong {
+strong
+{
 	font-weight: bold;
 }
 
-dfn {
+dfn
+{
 	font-style: italic;
 }
 
-h1 {
+h1
+{
 	font-size: 2em;
-	margin: 0.67em 0;
+	margin:    0.67em 0;
 }
 
-mark {
-	background: #ff0;
-	color: #000;
+mark
+{
+	background: #ffff00;
+	color:      #000000;
 }
 
-small {
+small
+{
 	font-size: 80%;
 }
 
 sub,
-sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
+sup
+{
+	font-size:      75%;
+	line-height:    0;
+	position:       relative;
 	vertical-align: baseline;
 }
 
-sup {
+sup
+{
 	top: -0.5em;
 }
 
-sub {
+sub
+{
 	bottom: -0.25em;
 }
 
-img {
+img
+{
 	border: 0;
 }
 
-svg:not(:root) {
+svg:not(:root)
+{
 	overflow: hidden;
 }
 
-figure {
+figure
+{
 	margin: 1em 40px;
 }
 
-hr {
+hr
+{
 	box-sizing: content-box;
-	height: 0;
+	height:     0;
 }
 
-pre {
+pre
+{
 	overflow: auto;
 }
 
 code,
 kbd,
 pre,
-samp {
+samp
+{
 	font-family: monospace, monospace;
-	font-size: 1em;
+	font-size:   1em;
 }
 
 button,
 input,
 optgroup,
 select,
-textarea {
-	color: inherit;
-	font: inherit;
+textarea
+{
+	color:  inherit;
+	font:   inherit;
 	margin: 0;
 }
 
-button {
+button
+{
 	overflow: visible;
 }
 
 button,
-select {
+select
+{
 	text-transform: none;
 }
 
 button,
 html input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"]
+{
 	-webkit-appearance: button;
-	cursor: pointer;
+	cursor:             pointer;
 }
 
 button[disabled],
-html input[disabled] {
+html input[disabled]
+{
 	cursor: default;
 }
 
 button::-moz-focus-inner,
-input::-moz-focus-inner {
-	border: 0;
+input::-moz-focus-inner
+{
+	border:  0;
 	padding: 0;
 }
 
-input {
+input
+{
 	line-height: normal;
 }
 
 input[type="checkbox"],
-input[type="radio"] {
+input[type="radio"]
+{
 	box-sizing: border-box;
-	padding: 0;
+	padding:    0;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-outer-spin-button
+{
 	height: auto;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-decoration
+{
 	-webkit-appearance: none;
 }
 
-fieldset {
-	border: 1px solid #c0c0c0;
-	margin: 0 2px;
+fieldset
+{
+	border:  1px solid #c0c0c0;
+	margin:  0 2px;
 	padding: 0.35em 0.625em 0.75em;
 }
 
-legend {
-	border: 0;
+legend
+{
+	border:  0;
 	padding: 0;
 }
 
-textarea {
+textarea
+{
 	overflow: auto;
 }
 
-optgroup {
+optgroup
+{
 	font-weight: bold;
 }
 
-table {
+table
+{
 	border-collapse: collapse;
-	border-spacing: 0;
+	border-spacing:  0;
 }
 
 td,
-th {
+th
+{
 	padding: 0;
 }
 
@@ -265,11 +304,12 @@ button,
 input,
 select,
 optgroup,
-textarea {
-	color: #404040;
+textarea
+{
+	color:       #404040;
 	font-family: sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size:   16px;
+	font-size:   1rem;
 	line-height: 1.5;
 }
 
@@ -278,141 +318,166 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6
+{
 	clear: both;
 }
 
-p {
+p
+{
 	margin-bottom: 1.5em;
 }
 
 dfn,
 cite,
 em,
-i {
+i
+{
 	font-style: italic;
 }
 
-blockquote {
+blockquote
+{
 	margin: 0 1.5em;
 }
 
-address {
+address
+{
 	margin: 0 0 1.5em;
 }
 
-pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
-	line-height: 1.6;
+pre
+{
+	background:    #eeeeee;
+	font-family:   "Courier 10 Pitch", Courier, monospace;
+	font-size:     15px;
+	font-size:     0.9375rem;
+	line-height:   1.6;
 	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
+	max-width:     100%;
+	overflow:      auto;
+	padding:       1.6em;
 }
 
 code,
 kbd,
 tt,
-var {
+var
+{
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size:   15px;
+	font-size:   0.9375rem;
 }
 
 abbr,
-acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
+acronym
+{
+	border-bottom: 1px dotted #666666;
+	cursor:        help;
 }
 
 mark,
-ins {
-	background: #fff9c0;
+ins
+{
+	background:      #fff9c0;
 	text-decoration: none;
 }
 
-big {
+big
+{
 	font-size: 125%;
 }
 
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-html {
+html
+{
 	box-sizing: border-box;
 }
 
 *,
 *:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*:after
+{ /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
 
-body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+body
+{
+	background: #ffffff; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
-q:after {
+q:after
+{
 	content: "";
 }
 
 blockquote,
-q {
+q
+{
 	quotes: "" "";
 }
 
-hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+hr
+{
+	background-color: #cccccc;
+	border:           0;
+	height:           1px;
+	margin-bottom:    1.5em;
 }
 
 ul,
-ol {
+ol
+{
 	margin: 0 0 1.5em 3em;
 }
 
-ul {
+ul
+{
 	list-style: disc;
 }
 
-ol {
+ol
+{
 	list-style: decimal;
 }
 
 li > ul,
-li > ol {
+li > ol
+{
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left:   1.5em;
 }
 
-dt {
+dt
+{
 	font-weight: bold;
 }
 
-dd {
+dd
+{
 	margin: 0 1.5em 1.5em;
 }
 
-img {
-	height: auto; /* Make sure images are scaled correctly. */
+img
+{
+	height:    auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
 }
 
-figure {
+figure
+{
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
 
-table {
+table
+{
 	margin: 0 0 1.5em;
-	width: 100%;
+	width:  100%;
 }
 
 /*--------------------------------------------------------------
@@ -421,23 +486,25 @@ table {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
+input[type="submit"]
+{
+	border:        1px solid;
+	border-color:  #cccccc #cccccc #bbbbbb;
 	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, .8);
-	font-size: 12px;
-	font-size: 0.75rem;
-	line-height: 1;
-	padding: .6em 1em .4em;
+	background:    #e6e6e6;
+	color:         rgba(0, 0, 0, .8);
+	font-size:     12px;
+	font-size:     0.75rem;
+	line-height:   1;
+	padding:       .6em 1em .4em;
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
-input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
+input[type="submit"]:hover
+{
+	border-color: #cccccc #bbbbbb #aaaaaa;
 }
 
 button:focus,
@@ -447,8 +514,9 @@ input[type="submit"]:focus,
 button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
-input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb;
+input[type="submit"]:active
+{
+	border-color: #aaaaaa #bbbbbb #bbbbbb;
 }
 
 input[type="text"],
@@ -466,15 +534,17 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
-	color: #666;
-	border: 1px solid #ccc;
+textarea
+{
+	color:         #666666;
+	border:        1px solid #cccccc;
 	border-radius: 3px;
-	padding: 3px;
+	padding:       3px;
 }
 
-select {
-	border: 1px solid #ccc;
+select
+{
+	border: 1px solid #cccccc;
 }
 
 input[type="text"]:focus,
@@ -492,11 +562,13 @@ input[type="time"]:focus,
 input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
-textarea:focus {
-	color: #111;
+textarea:focus
+{
+	color: #111111;
 }
 
-textarea {
+textarea
+{
 	width: 100%;
 }
 
@@ -506,200 +578,233 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
+a
+{
 	color: royalblue;
 }
 
-a:visited {
+a:visited
+{
 	color: purple;
 }
 
 a:hover,
 a:focus,
-a:active {
+a:active
+{
 	color: midnightblue;
 }
 
-a:focus {
+a:focus
+{
 	outline: thin dotted;
 }
 
 a:hover,
-a:active {
+a:active
+{
 	outline: 0;
 }
 
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
+.main-navigation
+{
+	clear:   both;
 	display: block;
-	float: left;
-	width: 100%;
+	float:   left;
+	width:   100%;
 }
 
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
+.main-navigation ul
+{
+	display:      none;
+	list-style:   none;
+	margin:       0;
 	padding-left: 0;
 }
 
-.main-navigation li {
-	float: left;
+.main-navigation li
+{
+	float:    left;
 	position: relative;
 }
 
-.main-navigation a {
-	display: block;
+.main-navigation a
+{
+	display:         block;
 	text-decoration: none;
 }
 
-.main-navigation ul ul {
+.main-navigation ul ul
+{
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
+	float:      left;
+	position:   absolute;
+	top:        100%;
+	left:       -999em;
+	z-index:    99999;
 }
 
-.main-navigation ul ul ul {
+.main-navigation ul ul ul
+{
 	left: -999em;
-	top: 0;
+	top:  0;
 }
 
-.main-navigation ul ul a {
+.main-navigation ul ul a
+{
 	width: 200px;
 }
 
-.main-navigation ul ul li {
+.main-navigation ul ul li
+{
 
 }
 
 .main-navigation li:hover > a,
-.main-navigation li.focus > a {
+.main-navigation li.focus > a
+{
 }
 
 .main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
+.main-navigation ul ul .focus > a
+{
 }
 
 .main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
+.main-navigation ul ul a.focus
+{
 }
 
 .main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
+.main-navigation ul li.focus > ul
+{
 	left: auto;
 }
 
 .main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
+.main-navigation ul ul li.focus > ul
+{
 	left: 100%;
 }
 
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
-.main-navigation .current-menu-ancestor > a {
+.main-navigation .current-menu-ancestor > a
+{
 }
 
 /* Small menu. */
 .menu-toggle,
-.main-navigation.toggled ul {
+.main-navigation.toggled ul
+{
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
+@media screen and (min-width: 37.5em)
+{
+	.menu-toggle
+	{
 		display: none;
 	}
-	.main-navigation ul {
+
+	.main-navigation ul
+	{
 		display: block;
 	}
 }
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,
-.site-main .post-navigation {
-	margin: 0 0 1.5em;
+.site-main .post-navigation
+{
+	margin:   0 0 1.5em;
 	overflow: hidden;
 }
 
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
-.post-navigation .nav-previous {
+.post-navigation .nav-previous
+{
 	float: left;
 	width: 50%;
 }
 
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
+.post-navigation .nav-next
+{
+	float:      right;
 	text-align: right;
-	width: 50%;
+	width:      50%;
 }
 
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
-.screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
+.screen-reader-text
+{
+	clip:      rect(1px, 1px, 1px, 1px);
+	position:  absolute !important;
+	height:    1px;
+	width:     1px;
+	overflow:  hidden;
 	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
-.screen-reader-text:focus {
+.screen-reader-text:focus
+{
 	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
+	border-radius:    3px;
+	box-shadow:       0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip:             auto !important;
+	color:            #21759b;
+	display:          block;
+	font-size:        14px;
+	font-size:        0.875rem;
+	font-weight:      bold;
+	height:           auto;
+	left:             5px;
+	line-height:      normal;
+	padding:          15px 23px 14px;
+	text-decoration:  none;
+	top:              5px;
+	width:            auto;
+	z-index:          100000; /* Above WP toolbar. */
 }
 
 /* Do not show the outline on the skip link target. */
-#content[tabindex="-1"]:focus {
+#content[tabindex="-1"]:focus
+{
 	outline: 0;
 }
 
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-.alignleft {
-	display: inline;
-	float: left;
+.alignleft
+{
+	display:      inline;
+	float:        left;
 	margin-right: 1.5em;
 }
 
-.alignright {
-	display: inline;
-	float: right;
+.alignright
+{
+	display:     inline;
+	float:       right;
 	margin-left: 1.5em;
 }
 
-.aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
+.aligncenter
+{
+	clear:        both;
+	display:      block;
+	margin-left:  auto;
 	margin-right: auto;
 }
 
@@ -717,9 +822,10 @@ a:active {
 .site-content:before,
 .site-content:after,
 .site-footer:before,
-.site-footer:after {
-	content: "";
-	display: table;
+.site-footer:after
+{
+	content:      "";
+	display:      table;
 	table-layout: fixed;
 }
 
@@ -728,19 +834,22 @@ a:active {
 .comment-content:after,
 .site-header:after,
 .site-content:after,
-.site-footer:after {
+.site-footer:after
+{
 	clear: both;
 }
 
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.widget {
+.widget
+{
 	margin: 0 0 1.5em;
 }
 
 /* Make sure select elements fit in widgets. */
-.widget select {
+.widget select
+{
 	max-width: 100%;
 }
 
@@ -750,37 +859,44 @@ a:active {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-.sticky {
+.sticky
+{
 	display: block;
 }
 
-.hentry {
+.hentry
+{
 	margin: 0 0 1.5em;
 }
 
-.updated:not(.published) {
+.updated:not(.published)
+{
 	display: none;
 }
 
 .page-content,
 .entry-content,
-.entry-summary {
+.entry-summary
+{
 	margin: 1.5em 0 0;
 }
 
-.page-links {
-	clear: both;
+.page-links
+{
+	clear:  both;
 	margin: 0 0 1.5em;
 }
 
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-.comment-content a {
+.comment-content a
+{
 	word-wrap: break-word;
 }
 
-.bypostauthor {
+.bypostauthor
+{
 	display: block;
 }
 
@@ -789,12 +905,14 @@ a:active {
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+.infinite-scroll.neverending .site-footer
+{ /* Theme Footer (when set to scrolling) */
 	display: none;
 }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer {
+.infinity-end.neverending .site-footer
+{
 	display: block;
 }
 
@@ -803,93 +921,111 @@ a:active {
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
-.comment-content .wp-smiley {
-	border: none;
+.comment-content .wp-smiley
+{
+	border:        none;
 	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
+	margin-top:    0;
+	padding:       0;
 }
 
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
-object {
+object
+{
 	max-width: 100%;
 }
 
 /* Make sure logo link wraps around logo image. */
-.custom-logo-link {
+.custom-logo-link
+{
 	display: inline-block;
 }
 
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
-.wp-caption {
+.wp-caption
+{
 	margin-bottom: 1.5em;
-	max-width: 100%;
+	max-width:     100%;
 }
 
-.wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin-left: auto;
+.wp-caption img[class*="wp-image-"]
+{
+	display:      block;
+	margin-left:  auto;
 	margin-right: auto;
 }
 
-.wp-caption .wp-caption-text {
+.wp-caption .wp-caption-text
+{
 	margin: 0.8075em 0;
 }
 
-.wp-caption-text {
+.wp-caption-text
+{
 	text-align: center;
 }
 
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
-.gallery {
+.gallery
+{
 	margin-bottom: 1.5em;
 }
 
-.gallery-item {
-	display: inline-block;
-	text-align: center;
+.gallery-item
+{
+	display:        inline-block;
+	text-align:     center;
 	vertical-align: top;
-	width: 100%;
+	width:          100%;
 }
 
-.gallery-columns-2 .gallery-item {
+.gallery-columns-2 .gallery-item
+{
 	max-width: 50%;
 }
 
-.gallery-columns-3 .gallery-item {
+.gallery-columns-3 .gallery-item
+{
 	max-width: 33.33333%;
 }
 
-.gallery-columns-4 .gallery-item {
+.gallery-columns-4 .gallery-item
+{
 	max-width: 25%;
 }
 
-.gallery-columns-5 .gallery-item {
+.gallery-columns-5 .gallery-item
+{
 	max-width: 20%;
 }
 
-.gallery-columns-6 .gallery-item {
+.gallery-columns-6 .gallery-item
+{
 	max-width: 16.66667%;
 }
 
-.gallery-columns-7 .gallery-item {
+.gallery-columns-7 .gallery-item
+{
 	max-width: 14.28571%;
 }
 
-.gallery-columns-8 .gallery-item {
+.gallery-columns-8 .gallery-item
+{
 	max-width: 12.5%;
 }
 
-.gallery-columns-9 .gallery-item {
+.gallery-columns-9 .gallery-item
+{
 	max-width: 11.11111%;
 }
 
-.gallery-caption {
+.gallery-caption
+{
 	display: block;
 }
