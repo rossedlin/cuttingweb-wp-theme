@@ -167,20 +167,27 @@
 
         .heading-text
         {
-            padding-top: 60px;
-        }
+			padding-top:    30px;
 
-        .heading-text p
-        {
-            color:       #ffffff;
-            font-size:   28px;
-            font-weight: bold;
-            text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+			color:          #ffffff;
+			font-size:      38px;
+			font-weight:    bold;
+			text-shadow:    0 0 3px #000000, 0 0 5px #000000;
         }
         
         .site
         {
             padding: 0;
+        }
+        
+        header .btn
+        {
+            box-shadow: 0 1px 4px 1px rgba(25, 25, 25, 0.75);
+        }
+
+        a:visited
+        {
+            color: #ffffff;
         }
         
         <?php if (!is_front_page()) { ?>
@@ -236,21 +243,23 @@
 
         <?php if (is_front_page())
         { ?>
-            <div class="row heading-text">
-                <div class="col-xs-12 col-sm-6 text-center">
-                    <p>
-                        Developer<br>
-                        Consultant<br>
-                        Creator<br>
-                    </p>
+			<div class="heading-text">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 text-center" style="padding-bottom: 30px;">
+						Developer<br>
+						Consultant<br>
+						Creator<br>
+					</div>
+				</div>
 
-                    <br>
-                    <p>
-                        See my portfolio here<br>
-                        Connect with me here<br>
-                    </p>
-                </div>
-            </div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 text-center">
+						<a href="/portfolio" class="btn btn-primary" style="padding: 8px 16px;">See my portfolio</a>
+						<a href="/contact" class="btn btn-success" style="padding: 8px 16px;">Connect with me</a>
+					</div>
+				</div>
+			</div>
+            
         <?php } ?>
     </header><!-- #masthead -->
 
