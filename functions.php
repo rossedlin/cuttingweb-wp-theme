@@ -155,3 +155,18 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+/**
+ * Cutting Web Functions
+ */
+
+add_filter('nav_menu_css_class', 'active_nav_class', 10, 2);
+function active_nav_class($classes, $item)
+{
+	if (in_array('current-menu-item', $classes))
+	{
+		$classes[] = 'active ';
+	}
+	return $classes;
+}
