@@ -18,13 +18,10 @@
 	<footer id="colophon" class="site-footer">
 		<div class="container">
 			<div class="row">
-                <div class="col-xs-4 text-left">
+                <div class="col-xs-12 text-center">
 					Copyright © <?= date('Y'); ?> Cutting Web
                 </div>
-				<div class="col-xs-4 text-center">
-
-                </div>
-				<div class="col-xs-4 text-right">
+				<div class="col-xs-12 text-center">
 					Created by <a href="http://www.rossedlin.co.uk/" target="_blank">Ross Edlin</a> | Powered by <a href="http://www.wordpress.org/" target="_blank">WordPress.org</a>
                 </div>
 			</div><!-- .site-info -->

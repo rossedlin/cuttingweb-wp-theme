@@ -49,7 +49,8 @@
         {
             width:           100%;
             height:          100%;
-            background:      url(/wp-content/themes/cuttingweb-underscore/img/nabs.jpg) center center no-repeat;
+            /*background:      url(/wp-content/themes/cuttingweb-underscore/img/nabs.jpg) center center no-repeat;*/
+            background:      url(/wp-content/themes/cuttingweb-underscore/img/stock-photo-young-employee-looking-at-computer-monitor-during-working-day-in-office-309941807.jpg) top center no-repeat;
             background-size: cover;
         }
 
@@ -118,12 +119,38 @@
             background-color: transparent;
         }
 
+        .navbar-default .navbar-nav > li > a
+        {
+            color: #f5f5f5;
+        }
+
         .navbar-default .navbar-nav > li > a:hover
         {
-            color:            #fc1a4a;
+            color:            #0375b4;
             background-color: transparent;
         }
-        
+
+        @media (max-width: 767px)
+        {
+            .navbar-default .navbar-nav > li > a
+            {
+                background: rgba(0, 0, 0, 0.7);
+            }
+        }
+
+        .heading-text
+        {
+            padding-top: 60px;
+        }
+
+        .heading-text p
+        {
+            color:       #ffffff;
+            font-size:   28px;
+            font-weight: bold;
+            text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+        }
+
         footer
         {
             margin: 10px 0 20px 0;
@@ -152,29 +179,33 @@
                         <a class="navbar-brand" href="/" style=""><?php bloginfo('name'); ?></a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="/">Home</a></li>
-                            <li><a href="/portfolio">Portfolio</a></li>
-                            <li><a href="/about">About</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li class="dropdown-header">Nav header</li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li><a href="#">One more separated link</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+						<?php wp_nav_menu([
+							'container'  => false,
+							'menu_class' => 'nav navbar-nav navbar-right',
+						]) ?>
                     </div><!--/.nav-collapse -->
                 </div>
             </nav>
         </div>
+
+        <?php if (is_front_page())
+        { ?>
+            <div class="row heading-text">
+                <div class="col-xs-12 col-sm-6 text-center">
+                    <p>
+                        Developer<br>
+                        Consultant<br>
+                        Creator<br>
+                    </p>
+
+                    <br>
+                    <p>
+                        See my portfolio here<br>
+                        Connect with me here<br>
+                    </p>
+                </div>
+            </div>
+        <?php } ?>
     </header><!-- #masthead -->
 
     <div id="content" class="site-content container">
