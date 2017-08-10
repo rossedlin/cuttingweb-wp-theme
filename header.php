@@ -44,21 +44,30 @@
             /*font:   normal 400 13px/1 'ralewayregular', Arial, sans-serif;*/
             font-family: 'Raleway', sans-serif;
         }
+        
+        .header-background
+        {
+            width:           100%;
+            height:          500px;
+            
+            background:      url(/wp-content/themes/cuttingweb-underscore/img/stock-photo-young-employee-looking-at-computer-monitor-during-working-day-in-office-309941807.jpg) top center no-repeat;
+            background-size: cover;
+            
+            position: absolute;
+            z-index: -1;
+        }
 
         header
         {
             width:           100%;
-            height:          100%;
-            /*background:      url(/wp-content/themes/cuttingweb-underscore/img/nabs.jpg) center center no-repeat;*/
-            background:      url(/wp-content/themes/cuttingweb-underscore/img/stock-photo-young-employee-looking-at-computer-monitor-during-working-day-in-office-309941807.jpg) top center no-repeat;
-            background-size: cover;
+            height:          500px;
         }
 
-        .navbar
-        {
+        <?php if (is_front_page()) { ?>
+        .navbar {
             /*padding:20px;*/
             /*width:710px;*/
-            height:     60px;
+            height: 60px;
             /*position:relative;*/
             /*background: rgb(204, 204, 204); !* Fallback for older browsers without RGBA-support *!*/
             background: rgba(0, 0, 0, 0.7);
@@ -69,6 +78,24 @@
             /*-moz-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.75);*/
             box-shadow: 0px 2px 10px 2px rgba(25, 25, 25, 0.75);
         }
+        <?php } else { ?>
+        .navbar
+        {
+            height:     60px;
+            background: rgba(0, 0, 0, 0.7);
+
+            /*-webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.75);*/
+            /*-moz-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.75);*/
+
+            /*box-shadow: 2px 0 2px 0px rgba(25, 25, 25, 0.75);*/
+            /*box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8), -12px 0 8px -4px rgba(31, 73, 125, 0.8);*/
+        }
+        
+        .site
+        {
+            box-shadow: 2px 0 2px 0 rgba(25, 25, 25, 0.75), -2px 0 2px 0 rgba(25, 25, 25, 0.75);
+        }
+        <?php } ?>
 
         .navbar-brand
         {
@@ -150,6 +177,24 @@
             font-weight: bold;
             text-shadow: 0 0 3px #000000, 0 0 5px #000000;
         }
+        
+        .site
+        {
+            padding: 0;
+        }
+        
+        <?php if (!is_front_page()) { ?>
+        .site-content
+        {
+            margin-top: -440px;
+        }
+        <?php } else { ?>
+        .site-content
+        {
+            margin-top: -40px;
+            box-shadow: 0 2px 10px 2px rgba(25, 25, 25, 0.75);
+        }
+        <?php }?>
 
         footer
         {
@@ -159,34 +204,35 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+
+<!-- Header Background -->
+<div id="header-background" class="header-background"></div>
+
+<!-- Main Site Container -->
+<div id="site" class="site container">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'cuttingweb'); ?></a>
 
-    <header id="masthead" class="" style="<?= (is_front_page() ? 'height: 500px; ' : '') ?>">
+    <header id="masthead" class="header">
 
-        <div class="container">
             <nav class="navbar navbar-default navbar-static-top">
-                <div class="container1">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                data-target="#navbar"
-                                aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="/" style=""><?php bloginfo('name'); ?></a>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-						<?php wp_nav_menu([
-							'container'  => false,
-							'menu_class' => 'nav navbar-nav navbar-right',
-						]) ?>
-                    </div><!--/.nav-collapse -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/" style=""><?php bloginfo('name'); ?></a>
                 </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <?php wp_nav_menu([
+                        'container'  => false,
+                        'menu_class' => 'nav navbar-nav navbar-right',
+                    ]) ?>
+                </div><!--/.nav-collapse -->
             </nav>
-        </div>
 
         <?php if (is_front_page())
         { ?>
@@ -208,4 +254,4 @@
         <?php } ?>
     </header><!-- #masthead -->
 
-    <div id="content" class="site-content container">
+    <div id="content" class="site-content">

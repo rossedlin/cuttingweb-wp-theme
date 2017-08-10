@@ -14,7 +14,12 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="" class="" style="">
+		
+		<div style="height: 500px;">
+			
+		</div>
+		<?php if (false) { ?>
 		<main id="main" class="site-main">
 
 			<?php
@@ -31,6 +36,7 @@ get_header(); ?>
 			?>
 
 		</main><!-- #main -->
+		<?php } ?>
 	</div><!-- #primary -->
 
 <?php
