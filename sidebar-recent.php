@@ -14,7 +14,7 @@
 
 /** @var WP_Post[] $posts */
 $posts = wp_get_recent_posts([
-	'numberposts'      => 10,
+	'numberposts'      => 5,
 	'offset'           => 0,
 	'category'         => 0,
 	'orderby'          => 'post_date',
@@ -53,17 +53,7 @@ $posts = wp_get_recent_posts([
 	.widget-content li hr
 	{
 		margin: 0;
-		/*padding: 15px 20px;*/
 	}
-
-	/*.widget-content ul li:not(:last-child):after*/
-	/*{*/
-	/*content:    "<hr>";*/
-	/*display:    block;*/
-	/*height:     1px;*/
-	/*width:      100%;*/
-	/*background: #000;*/
-	/*}*/
 
 	.widget-title
 	{
