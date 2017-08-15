@@ -81,7 +81,7 @@ if (!function_exists('cuttingweb_setup')) :
 			'flex-height' => true,
 		));
 
-		include( __DIR__ . '/inc/widgets.php' );
+		include(__DIR__ . '/inc/widgets.php');
 	}
 endif;
 add_action('after_setup_theme', 'cuttingweb_setup');
@@ -138,7 +138,7 @@ add_action('widgets_init', 'cuttingweb_widgets_init');
 function cuttingweb_scripts()
 {
 //	wp_enqueue_style('cuttingweb-style', get_stylesheet_uri());
-	wp_enqueue_style( 'cuttingweb-style', get_stylesheet_directory_uri() . '/style.css', '', filemtime(__DIR__ . '/style.css') );
+	wp_enqueue_style('cuttingweb-style', get_stylesheet_directory_uri() . '/style.css', '', filemtime(__DIR__ . '/style.css'));
 
 	wp_enqueue_script('cuttingweb-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
 
