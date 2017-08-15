@@ -1,5 +1,10 @@
 <?php
 /**
+ * Created by PhpStorm.
+ * User: Ross Edlin
+ * Date: 15/08/2017
+ * Time: 21:46
+ *
  * The template for displaying 404 pages (not found)
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
@@ -9,52 +14,88 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<style xmlns="http://www.w3.org/1999/html">
+		.nb-error
+		{
+			margin:     0 auto;
+			text-align: center;
+			max-width:  480px;
+			padding:    60px 30px;
+		}
+		
+		.nb-error div
+		{
+			padding: 10px 4px;
+		}
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'cuttingweb' ); ?></h1>
-				</header><!-- .page-header -->
+		.nb-error .error-code
+		{
+			color:       #2d353c;
+			font-size:   128px;
+			line-height: 136px;
+		}
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'cuttingweb' ); ?></p>
+		.nb-error .error-title
+		{
+			font-size:   15px;
+			font-weight: bold;
+		}
 
-					<?php
-						get_search_form();
+		.nb-error .error-desc
+		{
+			font-size: 14px;
+			color:     #647788;
+		}
 
-						the_widget( 'WP_Widget_Recent_Posts' );
-					?>
+		.nb-error .error-button a
+		{
+			margin: 2px 0;
+		}
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'cuttingweb' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
+		.nb-error .input-group
+		{
+			margin: 30px 0;
+		}
+	</style>
 
-					<?php
+	<div id="main" class="container site-main" style="">
+		
+		<div class="nb-error">
 
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'cuttingweb' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
+			<div class="col-xs-12 error-code">404</div>
+			<div class="col-xs-12 error-title">We couldn't find the page...</div>
+			<div class="col-xs-12 error-desc">
+				Sorry, but the page you are looking for was either not found or does not exist.
+			</div>
 
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+			<div class="col-xs-12 error-button">
+				<a href="/home" class="btn btn-primary" style="padding: 8px 16px;">Go to the home page</a>
+				<a href="/contact" class="btn btn-success" style="padding: 8px 16px;">Connect with me</a>
+			</div>
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+			<div class="col-xs-12 error-search input-group">
+				<form action="/" target="_top">
+					<span class="input-group-btn">
+						<input autocomplete="off"
+							   class="form-control"
+							   name="s"
+							   size="10"
+							   placeholder="Try searching..."
+							   title="Search"
+							   type="text"
+							   value="">
+						<button class="btn btn-default" title="search" type="submit"
+								value="Search">
+							<em class="fa fa-search"></em>
+						</button>
+					</span>
+				</form>
+			</div>
+			
+		</div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+
+	</div>
 
 <?php
 get_footer();
