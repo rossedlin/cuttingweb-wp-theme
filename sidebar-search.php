@@ -21,7 +21,7 @@
 
 <div class="panel panel-widget widget">
 	<div class="panel-heading widget-title" style="background: #333;">Search this Site</div>
-	<div class="panel-body widget-content">
+	<div class="panel-body widget-content" style="padding: 15px;">
 		<form action="/" class="gsc-search-box" target="_top">
 
 			<input autocomplete="off"
