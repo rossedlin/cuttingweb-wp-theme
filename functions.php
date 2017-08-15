@@ -80,6 +80,8 @@ if (!function_exists('cuttingweb_setup')) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		));
+
+		include( __DIR__ . '/inc/widgets.php' );
 	}
 endif;
 add_action('after_setup_theme', 'cuttingweb_setup');
@@ -106,14 +108,26 @@ add_action('after_setup_theme', 'cuttingweb_content_width', 0);
 function cuttingweb_widgets_init()
 {
 	register_sidebar(array(
-		'name'          => esc_html__('Sidebar', 'cuttingweb'),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__('Add widgets here.', 'cuttingweb'),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'name'          => __('Main Sidebar', 'cuttingweb'),
+		'id'            => 'sidebar-main',
+		'description'   => __('The main sidebar appears on the right on each page except the front page template', 'cuttingweb'),
+		'before_widget' => '<div id="%1$s" class="panel panel-widget widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="panel-heading widget-title">',
+		'after_title'   => '</div>',
 	));
+
+	register_sidebar(array(
+		'name'          => __('Front page sidebar', 'cuttingweb'),
+		'id'            => 'footer-1',
+		'description'   => __('Appears on the static front page template', 'cuttingweb'),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	));
+
+	register_widget('ImageLinkWidget');
 }
 
 add_action('widgets_init', 'cuttingweb_widgets_init');
@@ -123,7 +137,8 @@ add_action('widgets_init', 'cuttingweb_widgets_init');
  */
 function cuttingweb_scripts()
 {
-	wp_enqueue_style('cuttingweb-style', get_stylesheet_uri());
+//	wp_enqueue_style('cuttingweb-style', get_stylesheet_uri());
+	wp_enqueue_style( 'cuttingweb-style', get_stylesheet_directory_uri() . '/style.css', '', filemtime(__DIR__ . '/style.css') );
 
 	wp_enqueue_script('cuttingweb-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
 
