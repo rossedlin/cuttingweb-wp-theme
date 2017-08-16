@@ -7,6 +7,21 @@
  * @package CuttingWeb
  */
 
+if (!function_exists('pre'))
+{
+	/**
+	 * Wrapped PRINT_R - More human readable.
+	 *
+	 * @param $var
+	 */
+	function pre($var)
+	{
+		echo "<pre>";
+		print_r($var);
+		echo "</pre>";
+	}
+}
+
 if (!function_exists('cuttingweb_setup')) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
