@@ -51,7 +51,6 @@ get_header(); ?>
 				</div>
 				<div class="col-xs-12 col-md-3" style="margin: 20px 0">
 					<?php get_sidebar(); ?>
-					<?php get_sidebar('search'); ?>
 				</div>
 			</div>
 		</main><!-- #main -->
