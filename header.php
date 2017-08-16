@@ -24,13 +24,11 @@
 	<link rel="stylesheet" href="/wp-content/themes/cuttingweb-underscore/bootstrap-3.3.7/css/bootstrap-theme.css">
 	<!-- Bootstrap End -->
 
-	<!-- Font Awesome Start -->
+	<!-- Fonts Start -->
 	<link rel="stylesheet" href="/wp-content/themes/cuttingweb-underscore/font-awesome-4.7.0/css/font-awesome.min.css">
-	<!-- Font Awesome End -->
-
-	<!-- Railway Font Start -->
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<!-- Railway Font End -->
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<!-- Fonts End -->
 
 	<?php wp_head(); ?>
 
@@ -45,12 +43,23 @@
 			font-family: 'Raleway', sans-serif;
 		}
 
+		body
+		{
+			overflow-y: scroll;
+		}
+
+		.row
+		{
+			margin-right: 0;
+			margin-left:  0;
+		}
+
 		.header-background
 		{
 			width:           100%;
 			height:          500px;
 
-			background:      url(/wp-content/themes/cuttingweb-underscore/img/stock-photo-young-employee-looking-at-computer-monitor-during-working-day-in-office-309941807.jpg) top center no-repeat;
+			background:      url(/wp-content/themes/cuttingweb-underscore/img/young-employee-working-2000.jpg) top center no-repeat;
 			background-size: cover;
 
 			position:        absolute;
@@ -85,12 +94,6 @@
 		{
 			height:     60px;
 			background: rgba(0, 0, 0, 0.7);
-
-			/*-webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.75);*/
-			/*-moz-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.75);*/
-
-			/*box-shadow: 2px 0 2px 0px rgba(25, 25, 25, 0.75);*/
-			/*box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.8), -12px 0 8px -4px rgba(31, 73, 125, 0.8);*/
 		}
 
 		.site
@@ -188,9 +191,14 @@
 			box-shadow: 0 1px 4px 1px rgba(25, 25, 25, 0.75);
 		}
 
-		a:visited
+		header a:visited
 		{
 			color: #ffffff;
+		}
+
+		.site-content
+		{
+			background-color: #ffffff;
 		}
 
 		<?php if (!is_front_page()) { ?>
@@ -251,9 +259,8 @@
 			<div class="heading-text">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 text-center" style="padding-bottom: 30px;">
-						Developer<br>
-						Consultant<br>
-						Creator<br>
+						Full Stack Web Developer<br>
+						IT Consultant<br>
 					</div>
 				</div>
 
