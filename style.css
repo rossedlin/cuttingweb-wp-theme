@@ -61,16 +61,9 @@ template
 	display: none;
 }
 
-a
-{
-	background-color: transparent;
-}
-
-a:active,
-a:hover
-{
-	outline: 0;
-}
+/*--------------------------------------------------------------
+# Text
+--------------------------------------------------------------*/
 
 abbr[title]
 {
@@ -532,38 +525,58 @@ textarea
 }
 
 /*--------------------------------------------------------------
-# Navigation
+# Navigation, Hyperlinks, Href, Links
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
+
 a
 {
+	background-color: transparent;
 	color: royalblue;
 }
 
+.btn a
+{
+	color: #ffffff;
+}
+
+a:hover
+{
+	color: #f7b733;
+}
+
+/*a:active,*/
+/*a:hover*/
+/*{*/
+	/*outline: 0;*/
+/*}*/
+
 a:visited
 {
-	color: purple;
+	color: #337ab7;
 }
 
-a:hover,
-a:focus,
-a:active
+a:visited.btn
 {
-	color: midnightblue;
+	color: #ffffff;
 }
 
-a:focus
-{
-	outline: thin dotted;
-}
+/*a:hover,*/
+/*a:focus,*/
+/*a:active*/
+/*{*/
+	/*color: midnightblue;*/
+/*}*/
 
-a:hover,
-a:active
-{
-	outline: 0;
-}
+/*a:focus*/
+/*{*/
+	/*outline: thin dotted;*/
+/*}*/
+
+/*a:hover,*/
+/*a:active*/
+/*{*/
+	/*outline: 0;*/
+/*}*/
 
 /*--------------------------------------------------------------
 ## Menus
