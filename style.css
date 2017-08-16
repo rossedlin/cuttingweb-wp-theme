@@ -1,47 +1,13 @@
 /*
-Theme Name: Cutting Web Underscore
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
+Theme Name: Cutting Web
+Theme URI: https://www.cuttingweb.co.uk/theme
+Author: Ross Edlin
+Author URI: https://www.cuttingweb.co.uk/
 Description: Description
 Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
 Text Domain: cuttingweb
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-CuttingWeb is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 */
-
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Normalize
@@ -846,6 +812,37 @@ a:active
 	max-width: 100%;
 }
 
+.widget-title
+{
+	font:           normal normal 20px Oswald;
+	font-weight:    normal;
+	text-transform: uppercase;
+	background:     #333;
+	color:          white;
+}
+
+.widget .widget-search
+{
+	background:         #FFFFFF;
+	width:              100%;
+	padding:            15px 20px;
+	color:              rgba(0, 0, 0, 0.5);
+	-webkit-appearance: none;
+}
+
+/* Bootstrap Widget */
+.panel-widget
+{
+	box-shadow:    0 1px 2px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+	border-radius: 1px;
+	border:        0;
+}
+
+.panel-widget div
+{
+	padding: 8px 16px;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -1023,11 +1020,9 @@ object
 	display: block;
 }
 
-
 /*--------------------------------------------------------------
 ## Main Site
 --------------------------------------------------------------*/
-
 
 .list-group
 {
@@ -1226,57 +1221,4 @@ object
 	box-shadow:    0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
 	border-radius: 2px;
 	border:        0;
-}
-
-
-.panel-widget
-{
-	box-shadow:    0 1px 2px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
-	border-radius: 1px;
-	border:        0;
-}
-
-.widget-title
-{
-	font:           normal normal 20px Oswald;
-	font-weight:    normal;
-	text-transform: uppercase;
-	background:     #333;
-	color:          white;
-
-	padding:        8px 16px;
-}
-
-
-
-
-/*--------------------------------------------------------------
-## Sidebar
---------------------------------------------------------------*/
-
-.panel-widget
-{
-	box-shadow:    0 1px 2px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
-	border-radius: 1px;
-	border:        0;
-}
-
-.widget-title
-{
-	font:           normal normal 20px Oswald;
-	font-weight:    normal;
-	text-transform: uppercase;
-	background:     #333;
-	color:          white;
-
-	padding:        8px 16px;
-}
-
-.widget .widget-search
-{
-	background:         #FFFFFF;
-	width:              100%;
-	padding:            15px 20px;
-	color:              rgba(0, 0, 0, 0.5);
-	-webkit-appearance: none;
 }
