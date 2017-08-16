@@ -22,7 +22,7 @@ get_header(); ?>
 			max-width:  480px;
 			padding:    60px 30px;
 		}
-		
+
 		.nb-error div
 		{
 			padding: 10px 4px;
@@ -59,7 +59,7 @@ get_header(); ?>
 	</style>
 
 	<div id="main" class="container site-main" style="">
-		
+
 		<div class="nb-error">
 
 			<div class="col-xs-12 error-code">404</div>
@@ -91,7 +91,7 @@ get_header(); ?>
 					</span>
 				</form>
 			</div>
-			
+
 		</div>
 
 
