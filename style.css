@@ -857,6 +857,43 @@ a:visited.btn
 }
 
 /*--------------------------------------------------------------
+# Widgets - Recent Posts
+--------------------------------------------------------------*/
+
+.widget_recent_entries ul
+{
+	margin:     0;
+	padding:    0;
+
+	list-style: none;
+}
+
+.widget_recent_entries li
+{
+	margin:  0;
+	padding: 15px 20px;
+}
+
+.widget_recent_entries .widget-content li hr
+{
+	margin: 0;
+}
+
+.widget_recent_entries li
+{
+	border-bottom-color: rgba(0, 0, 0, 0.1);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+
+	font-weight:         bold;
+}
+
+.widget_recent_entries li:last-child
+{
+	border-bottom-style: none;
+}
+
+/*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------

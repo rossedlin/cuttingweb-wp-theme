@@ -52,9 +52,6 @@ get_header(); ?>
 				<div class="col-xs-12 col-md-3" style="margin: 20px 0">
 					<?php get_sidebar(); ?>
 					<?php get_sidebar('search'); ?>
-					<?php get_sidebar('recent'); ?>
-					<?php //get_sidebar('profile'); ?>
-					<?php //get_sidebar('newsletter'); ?>
 				</div>
 			</div>
 		</main><!-- #main -->
