@@ -1,2 +1,4 @@
-# cuttingweb-wp-theme
-Cutting Web WordPress Theme
+# Cutting Web WordPress Theme
+
+This is the main wordpress theme for the website https://www.cuttingweb.co.uk/
+Created by Ross Edlin
