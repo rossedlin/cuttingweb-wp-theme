@@ -22,6 +22,29 @@ if (!function_exists('pre'))
 	}
 }
 
+if (!function_exists('get_post_featured_image_src'))
+{
+	/**
+	 * Get a Wordpress POST's Featured image source url.
+	 * 
+	 * @param WP_Post $post
+	 * @return string
+	 */
+	function get_post_featured_image_src(WP_Post $post)
+	{
+		$thumb_id = get_post_thumbnail_id($post);
+		$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+
+		if (is_array($thumb_url_array) && isset($thumb_url_array[0]))
+		{
+			return $thumb_url_array[0];
+		}
+
+		return "";
+	}
+}
+
+
 if (!function_exists('cuttingweb_setup')) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
