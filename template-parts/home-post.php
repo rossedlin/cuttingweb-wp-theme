@@ -17,13 +17,13 @@ $author_name = get_the_author_meta('display_name', $post->post_author);
 <article id="post-<?php $post->ID; ?>" <?php post_class(); ?>>
 
 	<div class="row blog-post">
-		<div class="col-xs-12 col-sm-3 col-md-3 text-center">
+		<div class="col-xs-12 col-sm-4 col-md-4 text-center" style="padding: 8px;">
 			<a href="#">
-				<img src="<?= wp_get_attachment_image_url(get_post_thumbnail_id($post)); ?>"
+				<img src="<?= get_post_featured_image_src($post); ?>"
 					 class="blog-thumbnail img-responsive img-thumbnail">
 			</a>
 		</div>
-		<div class="col-xs-12 col-sm-9 col-md-9">
+		<div class="col-xs-12 col-sm-8 col-md-8" style="padding: 0 8px 0 8px;">
 			<div class="list-group">
 				<div class="list-group-item">
 					<div class="row-picture">
