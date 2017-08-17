@@ -259,7 +259,7 @@
 			<div class="heading-text">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 text-center" style="padding-bottom: 30px;">
-						Full Stack Web Developer<br>
+						Web Developer<br>
 						IT Consultant<br>
 					</div>
 				</div>
