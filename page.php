@@ -1,40 +1,34 @@
 <?php
 /**
- * The template for displaying all pages
+ * Created by PhpStorm.
+ * User: Ross Edlin
+ * Date: 18/08/2017
+ * Time: 12:35
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * The template for displaying all pages.
  *
- * @package CuttingWeb
+ * @package Cutting Web
  */
-
 get_header(); ?>
 
-	<div id="" class="" style="">
+	<div id="site-main" class="site-main container">
 
-		<main id="main" class="site-main">
+		<div class="row">
 
-			<?php while (have_posts())
-			{
-				the_post();
-
-				get_template_part('template-parts/content', 'page');
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if (comments_open() || get_comments_number())
+			<div class="col-xs-12 col-md-9">
+				<?php while (have_posts())
 				{
-					comments_template();
+					the_post();
+					get_template_part('template-parts/page');
+				} ?>
+			</div>
+			<div class="col-xs-12 col-md-3">
+				<?php get_sidebar(); ?>
+			</div>
 
-				}
-			} ?>
+		</div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</div>
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>
