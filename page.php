@@ -8,7 +8,7 @@
  *
  * The template for displaying all pages.
  *
- * @package Cutting Web
+ * @package CuttingWeb
  */
 get_header(); ?>
 
