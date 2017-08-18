@@ -19,13 +19,13 @@
 
 	<!-- Bootstrap Start -->
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="/wp-content/themes/cuttingweb-underscore/bootstrap-3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/wp-content/themes/cuttingweb/bootstrap-3.3.7/css/bootstrap.min.css">
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="/wp-content/themes/cuttingweb-underscore/bootstrap-3.3.7/css/bootstrap-theme.css">
+	<link rel="stylesheet" href="/wp-content/themes/cuttingweb/bootstrap-3.3.7/css/bootstrap-theme.css">
 	<!-- Bootstrap End -->
 
 	<!-- Fonts Start -->
-	<link rel="stylesheet" href="/wp-content/themes/cuttingweb-underscore/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/wp-content/themes/cuttingweb/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<!-- Fonts End -->
@@ -59,7 +59,7 @@
 			width:           100%;
 			height:          500px;
 
-			background:      url(/wp-content/themes/cuttingweb-underscore/img/young-employee-working-2000.jpg) top center no-repeat;
+			background:      url(/wp-content/themes/cuttingweb/img/young-employee-working-2000.jpg) top center no-repeat;
 			background-size: cover;
 
 			position:        absolute;
@@ -251,7 +251,7 @@
 					'container'  => false,
 					'menu_class' => 'nav navbar-nav navbar-right',
 				]) ?>
-			</div><!--/.nav-collapse -->
+			</div>
 		</nav>
 
 		<?php if (is_front_page())
