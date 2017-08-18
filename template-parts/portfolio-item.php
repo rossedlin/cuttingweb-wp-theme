@@ -24,7 +24,7 @@ $thumb_url = $thumb_url_array[0];
 			<h4><?= $post->post_title ?></h4>
 			<p><?= get_the_excerpt($post); ?></p>
 		</div>
-		<div class="panel-footer text-center">
+		<div class="panel-footer text-center <?= 'hidden' ?>">
 			<!--			<a href="#download"><span class="glyphicon glyphicon-download"></span></a>-->
 <!--			<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"><span-->
 <!--					class="fa fa-facebook"></span></a>-->

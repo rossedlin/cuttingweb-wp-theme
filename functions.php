@@ -2,7 +2,7 @@
 /**
  * CuttingWeb functions and definitions
  *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ * @link    https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package CuttingWeb
  */
@@ -16,9 +16,20 @@ if (!function_exists('pre'))
 	 */
 	function pre($var)
 	{
-		echo "<pre>";
-		print_r($var);
-		echo "</pre>";
+		if ($var === false)
+		{
+			echo "FALSE<br />";
+		}
+		elseif ($var === true)
+		{
+			echo "TRUE<br />";
+		}
+		else
+		{
+			echo "<pre>";
+			print_r($var);
+			echo "</pre>";
+		}
 	}
 }
 
@@ -26,21 +37,27 @@ if (!function_exists('get_post_featured_image_src'))
 {
 	/**
 	 * Get a Wordpress POST's Featured image source url.
-	 * 
+	 *
 	 * @param WP_Post $post
-	 * @return string
+	 *
+	 * @return string|bool
 	 */
 	function get_post_featured_image_src(WP_Post $post)
 	{
-		$thumb_id = get_post_thumbnail_id($post);
+		$thumb_id        = get_post_thumbnail_id($post);
 		$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
 
 		if (is_array($thumb_url_array) && isset($thumb_url_array[0]))
 		{
+			if (substr($thumb_url_array[0], strlen($thumb_url_array[0]) - 11, 11) == 'default.png')
+			{
+				return false;
+			}
+
 			return $thumb_url_array[0];
 		}
 
-		return "";
+		return false;
 	}
 }
 

@@ -12,12 +12,13 @@
  */
 
 $author_name = get_the_author_meta('display_name', $post->post_author);
+$img_src     = get_post_featured_image_src($post);
 ?>
 
 <article id="post-<?php $post->ID; ?>" <?php post_class(); ?>>
 
 	<div class="row blog-post">
-		<div class="col-xs-12 col-sm-4 col-md-4 text-center" style="padding: 8px;">
+		<div class="col-xs-12 col-sm-4 col-md-4 text-center <?= ($img_src ? '' : 'hidden') ?>" style="padding: 8px;">
 			<a href="#">
 				<img src="<?= get_post_featured_image_src($post); ?>"
 					 class="blog-thumbnail img-responsive img-thumbnail">

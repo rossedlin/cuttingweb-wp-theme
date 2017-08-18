@@ -8,10 +8,13 @@
  * Template Name: Home
  */
 
+/** @var WP_Term $term */
+$term = get_category_by_slug('front-page');
+
 $args = array(
 	'numberposts'      => 5,
 	'offset'           => 0,
-	'category'         => 0,
+	'category'         => $term->cat_ID,
 	'orderby'          => 'post_date',
 	'order'            => 'DESC',
 	'include'          => '',
@@ -25,6 +28,10 @@ $args = array(
 
 /** @var WP_Post[] $posts */
 $posts = wp_get_recent_posts($args, OBJECT);
+if (!is_array($posts))
+{
+	$posts = [];
+}
 
 get_header(); ?>
 
