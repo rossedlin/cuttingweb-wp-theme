@@ -9,7 +9,7 @@
  */
 
 $thumb_id        = get_post_thumbnail_id($post);
-$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'portfolio-250');
 $thumb_url       = $thumb_url_array[0];
 
 /**

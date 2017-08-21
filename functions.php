@@ -249,3 +249,18 @@ function active_nav_class($classes, $item)
 	}
 	return $classes;
 }
+
+add_filter( 'jpeg_quality', create_function( '', 'return 100;' ) );
+//add_filter('jpeg_quality', function ($arg)
+//{
+//	return 100;
+//});
+
+//add_image_size('sidebar-thumb', 120, 120, true); // Hard Crop Mode
+//add_image_size( 'homepage-thumb', 220, 180 ); // Soft Crop Mode
+//add_image_size( 'portfolio-thumb', 590, 9999 ); // Unlimited Height Mode
+add_image_size('portfolio-100', 9999, 100);
+add_image_size('portfolio-200', 9999, 200);
+add_image_size('portfolio-250', 9999, 250);
+add_image_size('portfolio-300', 9999, 300);
+add_image_size('portfolio-400', 9999, 400);

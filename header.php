@@ -33,43 +33,10 @@
 	<?php wp_head(); ?>
 
 	<style>
-		html,
-		body
-		{
-			width:       100%;
-			height:      100%;
-
-			/*font:   normal 400 13px/1 'ralewayregular', Arial, sans-serif;*/
-			font-family: 'Raleway', sans-serif;
-		}
-
-		body
-		{
-			overflow-y: scroll;
-		}
-
 		.row
 		{
 			margin-right: 0;
 			margin-left:  0;
-		}
-
-		.header-background
-		{
-			width:           100%;
-			height:          500px;
-
-			background:      url(/wp-content/themes/cuttingweb/img/young-employee-working-2000.jpg) top center no-repeat;
-			background-size: cover;
-
-			position:        absolute;
-			z-index:         -1;
-		}
-
-		header
-		{
-			width:  100%;
-			height: 500px;
 		}
 
 		<?php if (is_front_page()) { ?>
@@ -184,16 +151,6 @@
 		.site
 		{
 			padding: 0;
-		}
-
-		header .btn
-		{
-			box-shadow: 0 1px 4px 1px rgba(25, 25, 25, 0.75);
-		}
-
-		header a:visited
-		{
-			color: #ffffff;
 		}
 
 		.site-content
