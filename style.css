@@ -14,14 +14,25 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 --------------------------------------------------------------*/
 html
 {
-	font-family:              sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
+
+	width:       100%;
+	height:      100%;
+
+	font-family: 'Raleway', sans-serif;
 }
 
 body
 {
 	margin: 0;
+
+	width:       100%;
+	height:      100%;
+
+	overflow-y: scroll;
+
+	font-family: 'Raleway', sans-serif;
 }
 
 article,
@@ -430,6 +441,74 @@ table
 {
 	margin: 0 0 1.5em;
 	width:  100%;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.header-background
+{
+	width:           100%;
+	height:          500px;
+
+	background:      url(/wp-content/themes/cuttingweb/img/young-employee-working-2000vh.jpg) top center no-repeat;
+	background-size: cover;
+
+	position:        absolute;
+	z-index:         -1;
+}
+
+@media (max-width: 1400px)
+{
+	.header-background
+	{
+		background:      url(/wp-content/themes/cuttingweb/img/young-employee-working-1400vh.jpg) top center no-repeat;
+		background-size: cover;
+	}
+}
+
+@media (max-width: 1200px)
+{
+	.header-background
+	{
+		background:      url(/wp-content/themes/cuttingweb/img/young-employee-working-1200vh.jpg) top center no-repeat;
+		background-size: cover;
+	}
+}
+
+@media (max-width: 1200px)
+{
+	.header-background
+	{
+		background:      url(/wp-content/themes/cuttingweb/img/young-employee-working-1200vh.jpg) top center no-repeat;
+		background-size: cover;
+	}
+}
+
+@media (max-width: 600px)
+{
+	.header-background
+	{
+		background:      url(/wp-content/themes/cuttingweb/img/young-employee-working-600vh.jpg) top center no-repeat;
+		background-size: cover;
+	}
+}
+
+header
+{
+	width:  100%;
+	height: 500px;
+}
+
+header .btn
+{
+	box-shadow: 0 1px 4px 1px rgba(25, 25, 25, 0.75);
+}
+
+header a:visited
+{
+	color: #ffffff;
 }
 
 /*--------------------------------------------------------------
