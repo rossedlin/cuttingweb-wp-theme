@@ -8,9 +8,19 @@
  * @var WP_Post $post
  */
 
-$thumb_id = get_post_thumbnail_id($post);
+$thumb_id        = get_post_thumbnail_id($post);
 $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
-$thumb_url = $thumb_url_array[0];
+$thumb_url       = $thumb_url_array[0];
+
+/**
+ * Get the $portfolio_url
+ */
+$portfolio_url = get_post_meta($post->ID, 'portfolio_url');
+if (isset($portfolio_url[0]))
+{
+	$portfolio_url = $portfolio_url[0];
+}
+else $portfolio_url = false;
 
 ?>
 <div class="col-xs-12 col-md-6">
@@ -22,12 +32,16 @@ $thumb_url = $thumb_url_array[0];
 		</div>
 		<div class="panel-body">
 			<h4><?= $post->post_title ?></h4>
+			<?php if ($portfolio_url)
+			{ ?>
+				<span><a href="http://<?= $portfolio_url ?>" target="_blank"><?= $portfolio_url ?></a></span>
+			<?php } ?>
 			<p><?= get_the_excerpt($post); ?></p>
 		</div>
 		<div class="panel-footer text-center <?= 'hidden' ?>">
 			<!--			<a href="#download"><span class="glyphicon glyphicon-download"></span></a>-->
-<!--			<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"><span-->
-<!--					class="fa fa-facebook"></span></a>-->
+			<!--			<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"><span-->
+			<!--					class="fa fa-facebook"></span></a>-->
 			<a href="#facebook"><span class="fa fa-facebook"></span></a>
 			<a href="#twitter"><span class="fa fa-twitter"></span></a>
 			<a href="#share"><span class="glyphicon glyphicon-share-alt"></span></a>

@@ -12,14 +12,14 @@
 $term = get_category_by_slug('portfolio');
 
 $args = array(
-	'numberposts'      => 10,
+	'numberposts'      => 8,
 	'offset'           => 0,
 	'category'         => $term->cat_ID,
-	'orderby'          => 'post_date',
-	'order'            => 'DESC',
+	'orderby'          => 'meta_value',
+	'order'            => 'ASC',
 	'include'          => '',
 	'exclude'          => '',
-	'meta_key'         => '',
+	'meta_key'         => 'order_by',
 	'meta_value'       => '',
 	'post_type'        => 'post',
 	'post_status'      => 'publish',
@@ -36,16 +36,26 @@ get_header(); ?>
 			<div class="col-xs-12 col-md-9" style="padding: 0;">
 
 				<?php if (is_array($posts))
-				{ ?>
+				{
+					while (count($posts) > 0)
+					{
+						$i = 0;
+						?>
 
-					<div class="row form-group">
-						<?php foreach ($posts as $post)
-						{
-							get_template_part('template-parts/portfolio', 'item');
-						} ?>
-					</div>
+						<div class="row form-group">
+							<?php foreach ($posts as $key => $post)
+							{
+								if ($i > 1) break;
 
-				<?php }
+								get_template_part('template-parts/portfolio', 'item');
+
+								$i++;
+								unset($posts[$key]);
+							} ?>
+						</div>
+
+					<?php }
+				}
 				else
 				{
 					get_template_part('template-parts/content', 'none');
