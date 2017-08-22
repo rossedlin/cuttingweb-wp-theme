@@ -935,6 +935,11 @@ a:visited.btn
 	padding: 8px 16px;
 }
 
+.panel-widget .yikes-mailchimp-container
+{
+	padding: 8px 16px 16px 16px;
+}
+
 /*--------------------------------------------------------------
 # Widgets - Recent Posts
 --------------------------------------------------------------*/
