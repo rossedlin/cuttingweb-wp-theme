@@ -34,28 +34,44 @@ if (!is_array($posts))
 }
 
 get_header(); ?>
+	<style>
+		.navbar
+		{
+			-webkit-box-shadow: 0 2px 10px 2px rgba(25, 25, 25, 0.75);
+			-moz-box-shadow:    0 2px 10px 2px rgba(25, 25, 25, 0.75);
+			box-shadow:         0 2px 10px 2px rgba(25, 25, 25, 0.75);
+		}
 
-	<div id="site-main" class="site-main container">
+		.site-content
+		{
+			margin-top: -40px;
+			box-shadow: 0 2px 10px 2px rgba(25, 25, 25, 0.75);
+		}
+	</style>
 
-		<div class="row">
-			<div class="col-xs-12 col-md-9" style="padding: 0;">
-				<?php foreach ($posts as $post)
-				{
-					get_template_part('template-parts/home', 'post');
+	<div id="content" class="site-content">
+		<div id="site-main" class="site-main container">
 
-					// If comments are open or we have at least one comment, load up the comment template.
-					if (comments_open() || get_comments_number())
+			<div class="row">
+				<div class="col-xs-12 col-md-9" style="padding: 0;">
+					<?php foreach ($posts as $post)
 					{
-//							comments_template();
-					}
-				}
-				?>
-			</div>
-			<div class="col-xs-12 col-md-3">
-				<?php get_sidebar(); ?>
-			</div>
-		</div>
+						get_template_part('template-parts/home', 'post');
 
+						// If comments are open or we have at least one comment, load up the comment template.
+						if (comments_open() || get_comments_number())
+						{
+//							comments_template();
+						}
+					}
+					?>
+				</div>
+				<div class="col-xs-12 col-md-3">
+					<?php get_sidebar(); ?>
+				</div>
+			</div>
+
+		</div>
 	</div>
 
 <?php

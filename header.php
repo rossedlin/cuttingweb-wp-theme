@@ -4,7 +4,7 @@
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * @link    https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package CuttingWeb
  */
@@ -38,37 +38,6 @@
 			margin-right: 0;
 			margin-left:  0;
 		}
-
-		<?php if (is_front_page()) { ?>
-		.navbar
-		{
-			/*padding:20px;*/
-			/*width:710px;*/
-			height:     60px;
-			/*position:relative;*/
-			/*background: rgb(204, 204, 204); !* Fallback for older browsers without RGBA-support *!*/
-			background: rgba(0, 0, 0, 0.7);
-
-			/*text-shadow: 2px 2px;*/
-
-			/*-webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.75);*/
-			/*-moz-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.75);*/
-			box-shadow: 0px 2px 10px 2px rgba(25, 25, 25, 0.75);
-		}
-
-		<?php } else { ?>
-		.navbar
-		{
-			height:     60px;
-			background: rgba(0, 0, 0, 0.7);
-		}
-
-		.site
-		{
-			box-shadow: 2px 0 2px 0 rgba(25, 25, 25, 0.75), -2px 0 2px 0 rgba(25, 25, 25, 0.75);
-		}
-
-		<?php } ?>
 
 		.navbar-brand
 		{
@@ -153,26 +122,6 @@
 			padding: 0;
 		}
 
-		.site-content
-		{
-			background-color: #ffffff;
-		}
-
-		<?php if (!is_front_page()) { ?>
-		.site-content
-		{
-			margin-top: -440px;
-		}
-
-		<?php } else { ?>
-		.site-content
-		{
-			margin-top: -40px;
-			box-shadow: 0 2px 10px 2px rgba(25, 25, 25, 0.75);
-		}
-
-		<?php }?>
-
 		footer
 		{
 			margin: 10px 0 20px 0;
@@ -230,6 +179,4 @@
 			</div>
 
 		<?php } ?>
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+	</header>

@@ -29,6 +29,12 @@ $args = array(
 $posts = wp_get_recent_posts($args, OBJECT);
 
 get_header(); ?>
+	<style>
+		.site
+		{
+			box-shadow: 2px 0 2px 0 rgba(25, 25, 25, 0.75), -2px 0 2px 0 rgba(25, 25, 25, 0.75);
+		}
+	</style>
 
 	<div id="site-main" class="site-main container">
 

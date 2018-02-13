@@ -27,7 +27,6 @@
 	</div>
 </footer><!-- #colophon -->
 
-</div><!-- #content -->
 </div><!-- #page -->
 
 <!-- Latest compiled and minified JavaScript -->

@@ -2,14 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: Ross Edlin
- * Date: 18/08/2017
- * Time: 12:35
+ * Date: 26/08/2017
+ * Time: 14:32
  *
- *
- * The template for displaying all pages.
- *
- * @package CuttingWeb
+ * Template Name: Portfolio
+ * Template Post Type: post
  */
+
 get_header(); ?>
 
 	<style>
@@ -22,30 +21,34 @@ get_header(); ?>
 
 		.site-content
 		{
-			/*background-color: #ffffff;*/
 			margin-top: -440px;
 		}
 	</style>
 
 	<div id="content" class="site-content">
 		<div id="site-main" class="site-main container">
-
 			<div class="row">
+				<div class="col-xs-12 col-md-9" style="padding: 0;">
 
-				<div class="col-xs-12 col-md-9">
-					<?php while (have_posts())
+
+					<?php
+					while (have_posts())
 					{
 						the_post();
-						get_template_part('template-parts/page');
-					} ?>
+
+//					get_template_part('template-parts/content', get_post_type());
+					}
+					?>
+
 				</div>
+
 				<div class="col-xs-12 col-md-3">
 					<?php get_sidebar(); ?>
 				</div>
-
 			</div>
 
 		</div>
 	</div>
 
-<?php get_footer(); ?>
+<?php
+get_footer();

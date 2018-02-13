@@ -8,9 +8,13 @@
 ?>
 <article class="single_post">
 	<div class="article_text">
-		<h2><?php the_title(); ?></h2>
+		<div id="article_header">
+			<h2><?php the_title(); ?></h2>
+		</div>
 		<hr>
-		<?php the_content(); ?>
+		<div id="article_content">
+			<?php the_content(); ?>
+		</div>
 		<div class="clear"></div>
 		<p><?php posts_nav_link(); ?></p>
 	</div>
